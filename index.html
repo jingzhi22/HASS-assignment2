@@ -1,75 +1,180 @@
-<!DOCTYPE HTML>
-    <html>
-        <style>
-            * {
-              box-sizing: border-box;
-            }
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Grid - line-based placement starting point</title>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        topleft {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        topright {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        bottomleft {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        bottomright {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,h3{
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<h1>
+    Tay Jing Zhi
+</h1>
+<h3>
+    Assignment 2
+</h3>
+
+<body>
+
+    <div class="container">
+        <topleft>
             
-            body {
-              margin: 0;
-              font-family: Arial;
-            }
+            <b> Introduction </b>
+            <p>
+                This diagram is taken from a series of work by Phillip Hurrell: Fracking air pollutions sources. Three levels of data are presented here.   
+            </p>
+
+            <ol>
+                <li>
+                    Agents are shown as black figures at the top.
+                </li>
+                <li>
+                    Chemical compounds are shown in text above the arc.
+                </li>
+                <li>
+                    Health risks are shown in text below the arc.
+                </li>
+            </ol>
+
+
+            <b> Criticisms on data </b>
+            <ul>
+                <li>
+                    Line chart suggests that diagram shows relationship between agents and effects
+                    <br><br>
+                </li>
+                <li>
+                    However, the real effect (health risks), are not connected in any way (divided by curve arc)
+                    <br><br>
+                </li>
+                <li>
+                    The author acknowledges this gap with a disclaimer in the description.
+                    <br><br>
+                </li>
+                <li>
+                    So why did the author choose this method of visualilzation? To have a visually captivating diagram? To appear scientific or data-driven?
+                    <br><br>
+                </li>
+                <li>
+                    So why did the author choose this method of visualilzation? To have a visually captivating diagram? To appear scientific or data-driven?
+                    <br><br>
+                </li>
+            </ul>
+
+            <b> Criticism on idiom </b>
+            <ul>
+                <li>
+                    Health risks labels should be placed beside the figure of human body, relative to the part of the body each health risk affects. By having a different channel from the chemical compounds, readers are less prone to be mislead.
+                    <br><br>
+                </li>
+                <li>
+                    Shades of orange used on figure of human body is misleading. What is the author trying to imply with the different intensity? That agents harm the body to different degree? Or is the author simply differentiating the different systems of the body? To which, a categoricaly color chart would be less misleading.
+                    <br><br>
+                </li>
+                <li>
+                    Missing explanation for why agents F and G is highlighted in orange. Are these the most harmful agents? Who knows?
+                    <br><br>
+                </li>
+                <li>
+                    Missing legend for agents A-G
+                    <br><br>
+                </li>
+            </ul>
+
+        </topleft>
+        <topright>
+            <img src="https://geoarchitecture.files.wordpress.com/2014/02/hurrell_6.jpg?w=1758">
+            <p1>
+                Source:  https://geoarchitecture.wordpress.com/teaching/architecture-energy-matter-1-fracked-urbanism/hurrell_6/
+            </p1>
+        </topright>
+        <bottomleft>
+            <img src="https://public-media.interaction-design.org/images/uploads/6e895642183de2cc28f5b6cd8067bf78.jpg">
+            <p1>
+                Source:  https://github.com/deepthiyathiender/Maps
+            </p1>
+
             
-            .header {
-              text-align: center;
-              padding: 32px;
-            }
-            
-            /* Create two equal columns that floats next to each other */
-            .column {
-              float: left;
-              width: 35%;
-              padding: 10px;
-            }
-            p {
-                font-size: 1vw
-            }
-            p1 {
-                font-size: 8px;
-            }
-            h1 {
-                font-size: 3vw
-            }
-            h3 {
-                font-size: 2vw
-            }
-        </style>
-
-    <body id = "body">
-        <div align = "center" class="main" id = "main"></div>
-        <div class="row">
-            <div class="column">
-
-                <h1>
-                    Tay Jing Zhi
-                </h1>
-                <h3>
-                    Assignment 2
-                </h3>
-                <p>
-                    This diagram is taken from a series of work by Phillip Hurrell: Fracking air pollutions sources. I have chosen to critique this visualization as part of my own criticism on ‘data visualization’ produced by the architectural community. Architectural practice is visual in nature, yet the community commonly compromises visual perception for aesthetic reasons such as, choosing colours for the sake of following the general colour theme or visually structured to look ‘complete’ instead of informative. This is a problem when charts are stylized to look ‘scientific’ or ‘data driven’ when they are not, and potentially misleading readers.
+        </bottomleft>
+        <bottomright>
+            <b> Introduction </b>
+            <p>
+                This diagram is created as an example by Github user deepthiyathiender, presummably, for the author to showcase a force-directed network graph. Nodes are visualized to 'pull' towards other randomly selected nodes. 
+            </p>
+            <b> Criticisms on data </b>
+            <ul>
+                <li>
+                    N.A as many information is generated randomly.
+                </li>
+            </ul>
+            <b> Criticisms on idiom </b>
+            <ul>
+                <li>
+                    The criticisms below assume that the objective of the diagram is to eventually show how connected these popular websites are.
                     <br><br>
-                    The diagram is titled “Identifying agents and effects” and is accompanied by a body of text explaining the agents (hazardous air pollutants) and effects (health risks). It is followed by a disclaimer that ‘this diagram is indicative of these effects; however, it does not draw a direct relationship between the chemical and health issue in line with it”.
+                </li>
+                <li>
+                    Graph is entirely illegible. Text should minimally be plotted 'above' the circle patches. 
                     <br><br>
-                    My first criticism of this diagram is in the choice of using a ‘broken’ line chart. The heavy use of splines implies that the author is trying to connect ‘Agent’ and ‘Effect’. However this is utterly misleading, as the ‘effect’ (health risks) are not being related to the agents at all (as seen in the curve line dividing the chemical agents from the health risks at the bottom of the chart). Furthermore, the chaotic splines seem to suggest that the author never intended their readers to tract the chemical compound from each agent and instead, using the splines as a visual composition (like modern art) and making a general statement that chemical compounds come from different agents.  
+                </li>
+                <li>
+                    Since the 'strength' of a connected popular connected website should be measured by the number of websites it is connect to, this infomation should be shown most clearly using the radius of the circles, as it is impossible to count the number of edges connected to each node. 
                     <br><br>
-                    My second criticism is in the use of colour. Orange is used twice, once to aid with tracing the chemical compounds found from agents F and G, and a second time with a gradient in intensity, differentiating what seems to be the brain, lungs, intestine, stomach, and limbs. Why agents F and G are highlighted in orange may be a reference to earlier points, not explicitly explained in this paragraph, and will be ignored. Regarding the second point, it is unclear what the intention of the author is as they are also not referenced in the body of text. Based on personal interpretation, I believe that the author is trying to rank parts of the body function from those most affected by harmful chemical compounds (the brain) to those least affected (limbs). However, this is a case where a categorical or cyclic colour wheel would be more appropriate. This would also allow the author to match the effects identified with a part of the body (for e.g. shortness of breadth linked to lungs, headaches link to brain). 
+                </li>
+                <li>
+                    While the edges of a force-directed graph represent crucial links, it is not very visually informative. The author should consider reducing the visual weight of the edges by reducing opacity, lineweight, or dashed lines. 
                     <br><br>
-                    My last criticisms have to do with the general formatting of the information presented. Firstly, in my opinion, it is a big mistake to array the text uniformly to the tangent of the curve. The text on the left half of the page should be rotated 180 degrees. Secondly, there should be a legend to identify what is agents A to G.
-                </p>
+                </li>
+                <li>
+                    In my opinion, the final outcome of force-directed network graphs should include a clustering algorithm, with the objective to color websites linked to each other in similar tones. This may not be a practical idea as it is likely that most popular websites these days are linked to many other popular websites.
+                    <br><br>
+                </li>
+            </ul>
+        </bottomright>
+    </div>
 
-            </div>
-            <div class="column">
-                <img src="https://geoarchitecture.files.wordpress.com/2014/02/hurrell_6.jpg?w=1758" width = '600' height = 'auto'>
-                <p1>
-                    Source:  https://geoarchitecture.wordpress.com/teaching/architecture-energy-matter-1-fracked-urbanism/hurrell_6/
-                </p1>
-            </div>
-        </div>
-        
+</body>
 
-    </body>
-
-    <script>
-    </script>
 </html>
